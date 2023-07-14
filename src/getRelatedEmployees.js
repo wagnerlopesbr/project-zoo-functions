@@ -21,4 +21,4 @@ module.exports = { isManager, getRelatedEmployees };
 console.log(isManager(stephanieId));
 console.log(isManager('GABIGOL'));
 console.log(getRelatedEmployees(burlId));
-console.log(getRelatedEmployees('GABIGOL'));
+// console.log(getRelatedEmployees('GABIGOL'));
