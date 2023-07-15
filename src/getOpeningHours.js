@@ -1,4 +1,3 @@
-const data = require('../data/zoo_data');
 const { hours } = require('../data/zoo_data');
 
 const weekDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
