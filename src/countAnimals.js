@@ -6,7 +6,7 @@ function totalForSpecie() {
     specieTotal[specie.name] = specie.residents.length;
   });
   return specieTotal;
-}
+};
 
 const countAnimals = (animal) => {
   if (!animal) {
@@ -23,5 +23,5 @@ const countAnimals = (animal) => {
 
 module.exports = countAnimals;
 
-console.log(totalForSpecie());
-console.log(countAnimals('penguins'));
+// console.log(totalForSpecie());
+// console.log(countAnimals('penguins'));
