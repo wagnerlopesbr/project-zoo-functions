@@ -1,8 +1,9 @@
 const data = require('../data/zoo_data');
 
 function totalForSpecie() {
-  data.species.forEach((specie) => new Array([specie.name]) === specie.residents.length);
-  return Array;
+  const specieTotal = {};
+  data.species.forEach((specie) => specieTotal[specie.name] === specie.residents.length);
+  return specieTotal;
 }
 
 const countAnimals = (animal) => {
