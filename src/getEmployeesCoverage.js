@@ -6,13 +6,13 @@ function employeeInfo(info) {
   const { employees } = data;
   if (name) {
     return { // Retorne as informações da pessoa correspondente ao receber um objeto com a propriedade name:
-      info: employees.find((employee) => employee.firstName || employee.lastName),
+      info: employees.find((employee) => employee.firstName === name || employee.lastName === name),
       everybody: false,
     };
   }
   if (id) {
     return { // Retorne as informações da pessoa correspondente ao receber um objeto com a propriedade id
-      info: employees.find((employee) => employee.id),
+      info: employees.find((employee) => employee.id === id),
       everybody: false,
     };
   }
@@ -30,11 +30,11 @@ function speciesInfo(info) {
   return { speciesName, locations };
 }
 
-const infoObj = (employee) => { // formato desejado para retorno da função getEmployeesCoverage
-  const { firstName, lastName } = employee;
-  const { speciesName, locations } = speciesInfo(employee.responsibleFor);
+const infoObj = (employees) => { // formato desejado para retorno da função getEmployeesCoverage
+  const { firstName, lastName } = employees;
+  const { speciesName, locations } = speciesInfo(employees.responsibleFor);
   return {
-    id: employee.id,
+    id: employees.id,
     fullName: `${firstName} ${lastName}`,
     species: speciesName,
     locations,
@@ -43,15 +43,15 @@ const infoObj = (employee) => { // formato desejado para retorno da função get
 
 const infos = (employees) => employees.map((employee) => infoObj(employee));
 
-const getEmployeesCoverage = (info) => { // deverá retornar as informações sobre a pessoa colaboradora e por quais espécies ela é responsável.
-  const { memberInfo, everybody } = employeeInfo(info);
-  if (!memberInfo) {
+const getEmployeesCoverage = (obj) => { // deverá retornar as informações sobre a pessoa colaboradora e por quais espécies ela é responsável.
+  const { info, everybody } = employeeInfo(obj);
+  if (!info) {
     throw new Error('Informações inválidas'); // Lance um erro caso o id seja inválido.
   }
   if (everybody) {
-    return infos(memberInfo);
+    return infos(info);
   }
-  return infoObj(memberInfo); // A função deve retornar um objeto no seguinte formato:
+  return infoObj(info); // A função deve retornar um objeto no seguinte formato:
 };
 
 module.exports = getEmployeesCoverage;
