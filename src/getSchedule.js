@@ -32,7 +32,7 @@ function completeSchedule() {
     const animalsList = data.species
       .filter((animal) => animal.availability.includes(day))
       .map((animal) => animal.name);
-    if(day === 'Monday') {
+    if (day === 'Monday') {
       schedule.Monday.officeHour = 'CLOSED';
       schedule.Monday.exhibition = 'The zoo will be closed!';
     } else {
