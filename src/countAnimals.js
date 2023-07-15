@@ -11,11 +11,14 @@ const countAnimals = (animal) => {
     return totalForSpecie();
   }
   const { species, sex } = animal;
-  const specieResidents = data.species
-    .find((specie) => specie.name === species).residents;
+  const specieResidents = data.species.find(
+    (specie) => specie.name === species,
+  ).residents;
   return !sex
     ? specieResidents.length
     : species.residents.reduce((acc, resident) => (resident.sex === sex ? acc + 1 : acc), 0);
 };
 
 module.exports = countAnimals;
+
+console.log(countAnimals('penguins'));
