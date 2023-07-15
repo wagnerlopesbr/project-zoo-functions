@@ -18,5 +18,3 @@ const countAnimals = (animal) => {
 };
 
 module.exports = countAnimals;
-
-console.log(countAnimals('lions'));
