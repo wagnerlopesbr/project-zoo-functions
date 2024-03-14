@@ -1,10 +1,27 @@
-# :construction: README em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto.
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+# Zoo Functions - Project
+
+### English:
+
+#### What did I develop?
+
+I organized a zoo using functions to retrieve specific information about the animals, as well as fetching data about the people who collaborate with its maintenance and care.
+
+#### Skills tested in the project:
+
+- Test-Driven Development (TDD)
+- ES6
+- Higher Order Functions (HOF)
+
+---
+
+### Português:
+
+#### O que desenvolvi?
+
+Organizei um zoológico através de funções para buscar informações específicas sobre os animais, além de buscar dados sobre as pessoas que colaboram com a manutenção e cuidado do mesmo.
+
+#### Habilidades testadas no projeto:
+
+- Desenvolvimento Orientado à Testes (DOT)
+- ES6
+- Higher Order Functions (HOF)
